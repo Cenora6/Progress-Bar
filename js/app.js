@@ -105,17 +105,20 @@ $(function () {
     const inputDark = $('#darkmode');
     const inputLight = $('#lightmode');
     const check = $('.choose');
+    const body = $('body');
 
     inputDark.on('click', function () {
         check.css({
             left: "4.5rem",
-        })
+        });
+        body.addClass("darkMode");
     });
 
     inputLight.on('click', function () {
         check.css({
             left: "0.4rem",
-        })
+        });
+        body.removeClass("darkMode");
     })
 
 });

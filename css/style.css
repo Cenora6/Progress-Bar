@@ -18,7 +18,6 @@ body::after {
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    opacity: 0.5;
     top: 0;
     left: 0;
     bottom: 0;
@@ -26,6 +25,12 @@ body::after {
     position: absolute;
     z-index: -1;
 }
+
+body.darkMode::after {
+    content: "";
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
 
 .bars {
     display: flex;
@@ -56,6 +61,11 @@ button {
     cursor: pointer;
 }
 
+body.darkMode button {
+    color: black;
+    text-shadow: white 1px 0 5px;
+}
+
 button:active {
     top: 2.5rem;
 }
@@ -63,6 +73,10 @@ button:active {
 .blue {
     background-color: #434e9a;
     box-shadow: 0 15px 0 0 #2b3667, 0 0 20px 0 #bbb;
+}
+
+body.darkMode .blue {
+    box-shadow: 0 15px 0 0 #2b3667, 0 0 20px 0 #363636;
 }
 
 .blue:active {
@@ -74,6 +88,10 @@ button:active {
     box-shadow: 0 15px 0 0 #006200, 0 0 20px 0 #bbb;
 }
 
+body.darkMode .green {
+    box-shadow: 0 15px 0 0 #006200, 0 0 20px 0 #363636;
+}
+
 .green:active {
     box-shadow: 0 7px 0 0 #006200;
 }
@@ -81,6 +99,10 @@ button:active {
 .red {
     background-color: #ff3f2b;
     box-shadow: 0 15px 0 0 #8f2318, 0 0 20px 0 #bbb;
+}
+
+body.darkMode .red {
+    box-shadow: 0 15px 0 0 #8f2318, 0 0 20px 0 #363636;
 }
 
 .red:active {
@@ -93,6 +115,10 @@ button:active {
 
 }
 
+body.darkMode .purple {
+    box-shadow: 0 15px 0 0 #510051, 0 0 20px 0 #363636;
+}
+
 .purple:active {
     box-shadow: 0 7px 0 0 #510051;
 }
@@ -100,6 +126,10 @@ button:active {
 .maroon {
     background-color: maroon;
     box-shadow: 0 15px 0 0 #500000, 0 0 20px 0 #bbb;
+}
+
+body.darkMode .maroon {
+    box-shadow: 0 15px 0 0 #500000, 0 0 20px 0 #363636;
 }
 
 .maroon:active {
@@ -111,6 +141,10 @@ button:active {
     box-shadow: 0 15px 0 0 #998100, 0 0 20px 0 #bbb;
 }
 
+body.darkMode .yellow {
+    box-shadow: 0 15px 0 0 #998100, 0 0 20px 0 #363636;
+}
+
 .yellow:active {
     box-shadow: 0 7px 0 0 #998100;
 }
@@ -118,6 +152,10 @@ button:active {
 .orange {
     background-color: coral;
     box-shadow: 0 15px 0 0 #8d462c, 0 0 20px 0 #bbb;
+}
+
+body.darkMode .orange {
+    box-shadow: 0 15px 0 0 #8d462c, 0 0 20px 0 #363636;
 }
 
 .orange:active {
@@ -129,6 +167,10 @@ button:active {
     box-shadow: 0 15px 0 0 #99757b, 0 0 20px 0 #bbb;
 }
 
+body.darkMode .pink {
+    box-shadow: 0 15px 0 0 #99757b, 0 0 20px 0 #363636;
+}
+
 .pink:active {
     box-shadow: 0 7px 0 0 #99757b;
 }
@@ -136,6 +178,10 @@ button:active {
 .olive {
     background-color: olive;
     box-shadow: 0 15px 0 0 #515100, 0 0 20px 0 #bbb;
+}
+
+body.darkMode .olive {
+    box-shadow: 0 15px 0 0 #515100, 0 0 20px 0 #363636;
 }
 
 .olive:active {
@@ -149,6 +195,11 @@ button:active {
     margin: 5rem auto;
     border-radius: 3rem;
     border: 0.1rem solid #363636;
+}
+
+body.darkMode .progress-bar {
+    background-color: #bdbdbd;
+    border: 0.1rem solid #949494;
 }
 
 .progress-bar span {
@@ -179,6 +230,10 @@ button:active {
     transition: all 500ms;
 }
 
+body.darkMode .mode {
+    background: #323131;
+}
+
 input[type='radio'] {
     margin: 1rem 1.5rem;
     visibility: hidden;
@@ -203,6 +258,11 @@ label[for='darkmode'] {
     color: #1f2269;
 }
 
+body.darkMode label[for='darkmode'] {
+    color: white;
+    text-shadow: 2px 2px 2px #1f2269;
+}
+
 .choose {
     position: absolute;
     width: 2rem;
@@ -214,4 +274,8 @@ label[for='darkmode'] {
     -webkit-transition: all 500ms;
     transition: all 500ms;
     z-index: 4;
+}
+
+body.darkMode .choose {
+    background-color: black;
 }
