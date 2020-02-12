@@ -14,7 +14,7 @@ body {
 
 body::after {
     content: "";
-    background:  url("../images/background.jpg") no-repeat;
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -148,6 +148,7 @@ button:active {
     width: 90%;
     margin: 5rem auto;
     border-radius: 3rem;
+    border: 0.1rem solid #363636;
 }
 
 .progress-bar span {
@@ -161,4 +162,56 @@ button:active {
     text-align: right;
     text-shadow: 1px 1px 1px black;
     font-weight: 700;
+}
+
+.modeBar {
+    padding: 1rem 3rem;
+    display: flex;
+}
+
+.mode {
+    display: flex;
+    position: relative;
+    height: 3rem;
+    width: 7rem;
+    background: #d0cccd;
+    border-radius: 2rem;
+    transition: all 500ms;
+}
+
+input[type='radio'] {
+    margin: 1rem 1.5rem;
+    visibility: hidden;
+}
+
+label {
+    margin: 0.7rem 0.5rem;
+    position: relative;
+    font-size: 1rem;
+    z-index: 3;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+label[for='lightmode'] {
+    color: #ffe95c;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+label[for='darkmode'] {
+    color: #1f2269;
+}
+
+.choose {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    top: 0.5rem;
+    left: 0.4rem;
+    border-radius: 500px;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    z-index: 4;
 }

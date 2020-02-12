@@ -12,7 +12,7 @@ $(function () {
     blue.on("click", function () {
         span.css({
             backgroundColor: "#434e9a",
-            height: "3rem",
+            height: "2.8rem",
             width: "50%",
         });
         span.text('50%');
@@ -21,7 +21,7 @@ $(function () {
     green.on("click", function () {
         span.css({
             backgroundColor: "green",
-            height: "3rem",
+            height: "2.8rem",
             width: "20%",
         });
         span.text('20%');
@@ -30,7 +30,7 @@ $(function () {
     orange.on("click", function () {
         span.css({
             backgroundColor: "coral",
-            height: "3rem",
+            height: "2.8rem",
             width: "90%",
         });
         span.text('90%');
@@ -45,7 +45,7 @@ $(function () {
     yellow.on("click", function () {
         span.css({
             backgroundColor: "gold",
-            height: "3rem",
+            height: "2.8rem",
             width: "80%",
         });
         span.text('80%');
@@ -54,7 +54,7 @@ $(function () {
     red.on("click", function () {
         span.css({
             backgroundColor: "#ff3f2b",
-            height: "3rem",
+            height: "2.8rem",
             width: "40%",
         });
         span.text('40%');
@@ -63,7 +63,7 @@ $(function () {
     pink.on("click", function () {
         span.css({
             backgroundColor: "pink",
-            height: "3rem",
+            height: "2.8rem",
             width: "100%",
         });
         span.text('100%');
@@ -78,7 +78,7 @@ $(function () {
     purple.on("click", function () {
         span.css({
             backgroundColor: "purple",
-            height: "3rem",
+            height: "2.8rem",
             width: "10%",
         });
         span.text('10%');
@@ -87,7 +87,7 @@ $(function () {
     maroon.on("click", function () {
         span.css({
             backgroundColor: "maroon",
-            height: "3rem",
+            height: "2.8rem",
             width: "70%",
         });
         span.text('70%');
@@ -96,10 +96,26 @@ $(function () {
     olive.on("click", function () {
         span.css({
             backgroundColor: "olive",
-            height: "3rem",
+            height: "2.8rem",
             width: "30%",
         });
         span.text("30%");
     });
+
+    const inputDark = $('#darkmode');
+    const inputLight = $('#lightmode');
+    const check = $('.choose');
+
+    inputDark.on('click', function () {
+        check.css({
+            left: "4.5rem",
+        })
+    });
+
+    inputLight.on('click', function () {
+        check.css({
+            left: "0.4rem",
+        })
+    })
 
 });
