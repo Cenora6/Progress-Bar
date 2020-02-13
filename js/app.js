@@ -3,103 +3,104 @@ $(function () {
 
     const progressBar = $('.progress-bar');
     const span = progressBar.find('span');
+    const percent = $('h2');
 
-    const bar1 = $('.bar1');
-    const blue = bar1.find('.blue');
-    const green = bar1.find('.green');
-    const orange = bar1.find('.orange');
+    const set1 = $('.set1');
+    const blue = set1.find('.blue');
+    const green = set1.find('.green');
+    const orange = set1.find('.orange');
 
     blue.on("click", function () {
         span.css({
             backgroundColor: "#434e9a",
-            height: "2.8rem",
-            width: "50%",
+            height: "1.3rem",
+            width: "10%",
         });
-        span.text('50%');
+        percent.text('10%');
     });
 
     green.on("click", function () {
         span.css({
             backgroundColor: "green",
-            height: "2.8rem",
+            height: "1.3rem",
             width: "20%",
         });
-        span.text('20%');
+        percent.text('20%');
     });
 
     orange.on("click", function () {
         span.css({
             backgroundColor: "coral",
-            height: "2.8rem",
-            width: "90%",
+            height: "1.3rem",
+            width: "30%",
         });
-        span.text('90%');
+        percent.text('30%');
     });
 
-    const bar2 = $('.bar2');
-    const yellow = bar2.find('.yellow');
-    const red = bar2.find('.red');
-    const pink = bar2.find('.pink');
+    const set2 = $('.set2');
+    const yellow = set2.find('.yellow');
+    const red = set2.find('.red');
+    const pink = set2.find('.pink');
 
 
     yellow.on("click", function () {
         span.css({
             backgroundColor: "gold",
-            height: "2.8rem",
-            width: "80%",
+            height: "1.3rem",
+            width: "40%",
         });
-        span.text('80%');
+        percent.text('40%');
     });
 
     red.on("click", function () {
         span.css({
             backgroundColor: "#ff3f2b",
-            height: "2.8rem",
-            width: "40%",
+            height: "1.3rem",
+            width: "50%",
         });
-        span.text('40%');
+        percent.text('50%');
     });
 
     pink.on("click", function () {
         span.css({
             backgroundColor: "pink",
-            height: "2.8rem",
-            width: "100%",
+            height: "1.3rem",
+            width: "60%",
         });
-        span.text('100%');
+        percent.text('60%');
     });
 
-    const bar3 = $('.bar3');
-    const purple = bar3.find('.purple');
-    const maroon = bar3.find('.maroon');
-    const olive = bar3.find('.olive');
+    const set3 = $('.set3');
+    const purple = set3.find('.purple');
+    const maroon = set3.find('.maroon');
+    const olive = set3.find('.olive');
 
 
     purple.on("click", function () {
         span.css({
             backgroundColor: "purple",
-            height: "2.8rem",
-            width: "10%",
+            height: "1.3rem",
+            width: "70%",
         });
-        span.text('10%');
+        percent.text('70%');
     });
 
     maroon.on("click", function () {
         span.css({
             backgroundColor: "maroon",
-            height: "2.8rem",
-            width: "70%",
+            height: "1.3rem",
+            width: "80%",
         });
-        span.text('70%');
+        percent.text('80%');
     });
 
     olive.on("click", function () {
         span.css({
             backgroundColor: "olive",
-            height: "2.8rem",
-            width: "30%",
+            height: "1.3rem",
+            width: "90%",
         });
-        span.text("30%");
+        percent.text("90%");
     });
 
     const inputDark = $('#darkmode');

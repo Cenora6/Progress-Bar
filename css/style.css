@@ -7,17 +7,21 @@
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     position: relative;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body.darkMode {
+    background: black;
 }
 
 body::after {
     content: "";
     background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    border-radius: 0 0 85% 85% / 30%;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     top: 0;
     left: 0;
     bottom: 0;
@@ -31,14 +35,27 @@ body.darkMode::after {
     background: linear-gradient(to right, #141e30, #243b55);
 }
 
+.title {
+    text-align: center;
+    height: 10%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px #333;
+    color: white;
+}
 
-.bars {
+body.darkMode .title {
+    color: white;
+}
+
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 60%;
 }
 
-.bar1, .bar2, .bar3 {
+.set1, .set2, .set3 {
     margin: 2rem;
 }
 
@@ -48,22 +65,17 @@ button {
     border-radius: 3rem;
     margin: 1rem 0;
     border: none;
-    font-size: 1rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: white;
-    text-transform: uppercase;
     padding: 0 2rem;
-    text-shadow: 1px 1px 1px black;
     transition: all 0.2s;
     outline: none;
     position: relative;
     top: 2rem;
     cursor: pointer;
-}
-
-body.darkMode button {
-    color: black;
-    text-shadow: white 1px 0 5px;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 1px 1px 1px #333;
 }
 
 button:active {
@@ -189,30 +201,49 @@ body.darkMode .olive {
 }
 
 .progress-bar {
-    background-color: #1a1a1a;
+    background-color: #cac9c9;
     height: 3rem;
     width: 90%;
-    margin: 5rem auto;
-    border-radius: 3rem;
-    border: 0.1rem solid #363636;
+    border: 0.1rem solid #cac9c9;
+    position: relative;
+    border-radius: 2rem;
+    padding: 0.8rem;
+    margin: 17rem auto 2rem;
 }
 
 body.darkMode .progress-bar {
-    background-color: #bdbdbd;
-    border: 0.1rem solid #949494;
+    background-color: #343434;
+    border: 0.1rem solid #413d3d;
 }
 
 .progress-bar span {
     display: inline-block;
     height: 100%;
     width: 0;
-    border-radius: 3rem;
     transition: all 1s;
-    padding: 1rem;
     color: white;
     text-align: right;
     text-shadow: 1px 1px 1px black;
-    font-weight: 700;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 1.2rem 0.5rem 0.5rem 1.2rem ;
+    box-shadow:
+            inset 0 2px 9px  rgba(255,255,255,0.3),
+            inset 0 -2px 6px rgba(0,0,0,0.4);
+}
+
+.progress-bar h2 {
+    position: absolute;
+    bottom: 0;
+    left: -4rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Dancing Script', cursive;
+    color: #000000;
+}
+
+body.darkMode h2 {
+    color: #FFF;
 }
 
 .modeBar {
@@ -244,9 +275,10 @@ label {
     position: relative;
     font-size: 1rem;
     z-index: 3;
-    font-weight: bold;
     cursor: pointer;
     transition: 500ms;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }
 
 label[for='lightmode'] {
@@ -278,4 +310,57 @@ body.darkMode label[for='darkmode'] {
 
 body.darkMode .choose {
     background-color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+    body::after {
+        height: 90%;
+        border-radius: 0 0 150% 150% / 20%;
+    }
+
+    label {
+        font-size: 0.8rem;
+        margin: 0.7rem auto;
+    }
+
+    .title {
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+    button {
+        border: 0.1rem solid black;
+        border-radius: 0.5rem;
+        width: 9rem;
+        height: 3rem;
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    .set1, .set2, .set3 {
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .progress-bar {
+        margin: 10rem auto 2rem;
+    }
+
+    .progress-bar h2 {
+        position: absolute;
+        bottom: 4rem;
+        left: 45%;
+    }
 }
