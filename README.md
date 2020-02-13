@@ -1,7 +1,7 @@
 # Progress Bar
 
 ## Description:
-While clicking the buttons above the progress bar, it will change the percent of the bar's width colored and the color. 
+While clicking the buttons above the progress bar, it will change the percent of the bar's width colored and the color. You can also choose the light/dark mode.
 
 ## Technologies:
 - HTML5
